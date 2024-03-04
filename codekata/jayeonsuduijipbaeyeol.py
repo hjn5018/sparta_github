@@ -6,7 +6,6 @@
 def solution(n):
     list_ = []
     for i in str(n):
-        list_.append(i)
         
 
 print(solution(542))
