@@ -25,6 +25,6 @@ def solution(dot):
 # dot = [3,-3]
 # # 4
     
-result = solution(dot)
+# result = solution(dot)
 
-print(result)
+# print(result)
