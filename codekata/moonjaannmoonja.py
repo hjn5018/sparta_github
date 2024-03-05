@@ -20,10 +20,10 @@ str2 = "6CD"
 # 문자열은 알파벳 대문자, 소문자, 숫자로 구성되어 있습니다.
 
 def solution(str1, str2):
-    # if str2 in str1:
-    #     return 1
-    # else:
-    #     return 2
+    if str2 in str1:
+        return 1
+    else:
+        return 2
 result = solution(str1, str2)
 
 print(result)
