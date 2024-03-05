@@ -23,5 +23,3 @@ new_string = ""
 new_string = new_string + my_string*k
 
 print(new_string)
-
-)
