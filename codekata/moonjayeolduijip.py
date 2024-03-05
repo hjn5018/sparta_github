@@ -3,12 +3,12 @@
 
 # 1 ≤ my_string의 길이 ≤ 1,000
 
-# def solution(my_string):
-    
-
-
-
-
+def solution(my_string):
+    new_string = ""
+    for i in my_string:
+        new_string = i + new_string
+    return new_string
+# ====================================================
 # 1. 원소 간 뒤집
 # my_string[i], my_string[i+1] = my_string[i+1], my_string[i]
 
@@ -54,24 +54,40 @@
 
 # print(result)
 # ==============================================
-# 그렇다면 리스트 원소들을 다시 스트링으로 변환하려면?????
-# str(list)????
-# 안되네..
+# # 그렇다면 리스트 원소들을 다시 스트링으로 변환하려면?????
+# # str(list)????
+# # 안되네..
 
-def solution(my_string):
-    ms_list = []
-    for i in my_string:
-        ms_list.append(i)
-    # return ms_list
-    # # ['j', 'a', 'r', 'o', 'n']
+# def solution(my_string):
+#     ms_list = []
+#     for i in my_string:
+#         ms_list.append(i)
+#     # return ms_list
+#     # # ['j', 'a', 'r', 'o', 'n']
     
-    n = len(my_string)
+#     n = len(my_string)
 
-    for i in range(n-1):
-        ms_list[i], ms_list[i+1] = ms_list[i+1], ms_list[i]
-    # return str(ms_list)
-    # # ['a', 'r', 'o', 'n', 'j']
+#     for i in range(n-1):
+#         ms_list[i], ms_list[i+1] = ms_list[i+1], ms_list[i]
+#     # return str(ms_list)
+#     # # ['a', 'r', 'o', 'n', 'j']
 
-result = solution("jaron")
+# result = solution("jaron")
 
-print(result)
+# print(result)
+# ==============================================
+# my_string = "jaron"
+# new_string = ""
+# for i in my_string:
+# #     print(i)
+# # # j
+# # # a
+# # # r
+# # # o
+# # # n
+# #     new_string = i + new_string
+# # # noraj
+# #     new_string = new_string + i
+# # # jaron
+# # return new_string
+# print(new_string)
