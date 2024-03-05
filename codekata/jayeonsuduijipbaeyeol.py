@@ -68,15 +68,15 @@
 # # print(list_)
 # # # [1, 2, 3, 4, 5]
 # ======================================================
-n = 12345
-list_ = []
-n = str(n)
+# n = 12345
+# list_ = []
+# n = str(n)
 
-for i in n:
-    list_.append(int(i))
-print(list_[::-1])
+# for i in n:
+#     list_.append(int(i))
+# print(list_[::-1])
 
-def solution(n);
+def solution(n):
     list_ = []
     n = str(n)
 
