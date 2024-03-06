@@ -14,6 +14,10 @@
 # 입력값 〉	[1, 2, 3, 4, 5], 3
 # 기댓값 〉	1
 # 실행 결과 〉	실행한 결괏값 0이 기댓값 1과 다릅니다.
+
+# <str> in으로 조사하려고 했다.
+# 틀린 걸 보니
+# num_list의 요소가 int인 것 같다.
 # ===========================================
 
 # def solution(num_list, n):
@@ -30,11 +34,11 @@
 
 
 num_list = [1,2,3,4,5]
-result = type(num_list)
-# <class 'list'>
-result = type(num_list[1])
-# <class 'int'>
-# print(result)
+# result = type(num_list)
+# # <class 'list'>
+# result = type(num_list[1])
+# # <class 'int'>
+# # print(result)
 
 def solution(num_list, n):
     result = 0
@@ -46,4 +50,15 @@ def solution(num_list, n):
     else:
         return 0
 
-# for문으로 뽑기 좀 힘든데..?
+# # for문으로 뽑기 좀 힘든데..?
+
+
+# for num in num_list:
+#     num = str(num)
+
+# num_list = ['1']
+
+# print(num_list)
+# # ['1']
+# # print(type(num_list[1]))
+
