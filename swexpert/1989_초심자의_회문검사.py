@@ -105,24 +105,24 @@
 #     else:
 #         str_ + f"#{i}, 0"
 #         # print(f"#{i} 0")
-# ==========================================================
-case_num = int(input())
-list_ = []
+# =========================7/10 오답=================================
+# case_num = int(input())
+# list_ = []
 
-for i, j in enumerate(range(3), 1): # 인풋 다 받아버리기 // enumerate로 index 새겨주기
-    case = input() # 근데 index를 어떻게 꽂아주지..?
+# for i, j in enumerate(range(3), 1): # 인풋 다 받아버리기 // enumerate로 index 새겨주기
+#     case = input() # 근데 index를 어떻게 꽂아주지..?
 
-    if case == case[::-1]:
-        list_.append(f"#{i} 1")
-        # list_.append(f"#{i}, 1")
-        # print(f"#{i}, 1")
-    else:
-        list_.append(f"#{i} 0")
-        # list_.append(f"#{i}, 0")
-        # print(f"#{i} 0")
+#     if case == case[::-1]:
+#         list_.append(f"#{i} 1")
+#         # list_.append(f"#{i}, 1")
+#         # print(f"#{i}, 1")
+#     else:
+#         list_.append(f"#{i} 0")
+#         # list_.append(f"#{i}, 0")
+#         # print(f"#{i} 0")
 
-for k in list_:
-    print(k)
+# for k in list_:
+#     print(k)
 
 #1, 1
 #2, 0
@@ -131,3 +131,8 @@ for k in list_:
 #1 1
 #2 0
 #3 1
+
+# 오답
+# 채점용 input 파일로 채점한 결과 fail 입니다.
+# (오답 : 10개의 테스트케이스 중 3개가 맞았습니다.)
+# ========================================================
