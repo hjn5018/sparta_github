@@ -6,7 +6,7 @@
 # 문자열 받자.
 # case = input()
 # 물론 T만큼
-# for case in range(T):
+# for i in range(T):
 
 # 받은 줄에 대해서 마디를 찾는다.
 """
@@ -30,4 +30,23 @@
 마디의 길이가 i임을 알 수 있다.
 -끗-
 """
-# ===========================================
+# ==============return???=============================
+# T = int(input)
+
+# for i in range(T):
+#     case = input()
+#     for j, letter in enumerate(case, 1): # 근데 str이 iterable인가?
+#         if letter == case[0]:
+#             return j # 함수에 담아서 return하지 않으면, 어딘가ㅔ 담았다가 뱉어야 하는데..
+# =======================================================
+T = int(input)
+list_ = []
+
+for i in range(T):
+    case = input()
+    for j, letter in enumerate(case, 1): # 근데 str이 iterable인가?
+        if letter == case[0]:
+            list_.append(j) # 함수에 담아서 return하지 않으면, 어딘가ㅔ 담았다가 뱉어야 하는데..
+
+print(f"#{i} j")
+
