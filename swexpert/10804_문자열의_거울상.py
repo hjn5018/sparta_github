@@ -44,4 +44,21 @@ def baggwer(str_):
         # 1.
         for i, j in enumerate(str_):
             # 이건 규모가 너무 커지는데..................
+# ===============================================================
+# 사전에 copy를 따놓고
+# 일단 replace를 해서
+# copy본과 replace본을 비교하고
+# 같은 거는 다르도록 replace로 바꾼다
+# ex)
+# bd -> copy bd
+#    -> replace bb
+
+# copy bd와 replace bb를 비교
+
+# 겹치는 0번째의 b를 d로 replace
+
+# replace bb-> rereplace db
+
+# 되려나??
+# 이건 케이스의 길이//조합에 따라 안되는 경우가 허다하다..
             
