@@ -294,9 +294,6 @@ A_list = list(map(int, input().split())) # 탐색될 요소들의 리스트
 M = int(input())
 B_list = list(map(int, input().split())) # 타겟이 모인 리스트
 
-start = 0
-end = N - 1 # 2-A. 이진탐색을 할거고, index로 start, end를 설정할 때 end는 len - 1이다.
-
 A_list.sort() # 2. 반복문 들어가기 전에 이진탐색을 위한 정렬부터
 
 for target in B_list: # 1. B_list를 돌면서 확인할건데
@@ -306,8 +303,12 @@ for target in B_list: # 1. B_list를 돌면서 확인할건데
 # 7
 # 9
 # 5
+    start = 0
+    end = N - 1 # 2-A. 이진탐색을 할거고, index로 start, end를 설정할 때 end는 len - 1이다.
+
     while start <= end: # 2-1. 이진탐색 들어가는데, end start 엇갈리면 target 없는거 
         mid = (start + end) // 2 # 2-B 이진탐색의 기준점(mid)은 시행마다 달라진다. -> while문 안에 넣기.
+
         if target > A_list[mid]: # up인 경우
             start = mid + 1
         elif target < A_list[mid]:
@@ -315,11 +316,15 @@ for target in B_list: # 1. B_list를 돌면서 확인할건데
         else: # target == A_list[mid] 리스트 안에 target이 존재하는 경우
             print(1)
             break
+
     print(0) # start > end인 경우(로직을 벗어난 경우//탐색을 다 한 경우)
+# 1
+# 0
 # 1
 # 0
 # 0
 # 0
+# 1
 # 0
-# 0
-# break 넣었더니 다시 원점.............................
+# start, end for문에 넣어봄
+# =======================================start, end for문에 넣어봄// 이건 맞는 시도인 듯==========================
