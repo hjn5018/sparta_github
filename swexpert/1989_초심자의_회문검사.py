@@ -110,3 +110,34 @@
 # 채점용 input 파일로 채점한 결과 fail 입니다.
 # (오답 : 10개의 테스트케이스 중 3개가 맞았습니다.)
 # ========================================================
+T = int(input())
+
+list_ = []
+for i in range(1, T+1):
+    case = input()
+    if case == case[::-1]:
+        print(f"#{i} 1")
+        # list_.append(f"#{i} 1")
+    else:
+        print(f"#{i} 0")
+        # list_.append(f"#{i} 0")
+
+# for j in range(T):
+#     print(f"#{i} 1")
+
+# 3
+# level
+# samsung
+# eye
+
+# ????????????????????????????????????///
+# 3
+# level
+# #1 1
+# samsung
+# #2 0
+# eye
+# #3 1
+        
+# vscode에서는 이렇게 보이는데 이게 통과해????????????/
+        
