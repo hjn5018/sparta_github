@@ -58,14 +58,40 @@
 # 인덱싱하는 데 문제가... 있지 않나???
 
 # ========================================
+# T = int(input())
+
+
+# for i in range(1, T+1):
+    # N, M = map(int, input().split())
+#     lines = []
+
+#     for j in range(1, N+1):
+#         line = input()
+
+        # lines.append(line)
+# ===============================================
+# T = int(input())
+
+
+# for i in range(1, T+1):
+#     N, M = map(int, input().split())
+
+#     for j in range(1, N+1):
+#         (i, j) = input()ㅁㄴㅇㄻㄴㄹ # 하나하나의 숫자를 (i, j)로 지정해주고 싶은뎅.. // 근데 이거는 전에 리스트로 받은거랑 같지 않나??
+#                                     # 전에는 리스트에서 인덱싱 해야했다면, 지금은 숫자에 바로 인덱싱 해버리는 것
+# =====================================================
 T = int(input())
 
 
 for i in range(1, T+1):
     N, M = map(int, input().split())
-    lines = []
 
     for j in range(1, N+1):
-        line = input()
-
-        # lines.append(line)
+        # (i, j)는 준비됐다구!
+        # 근데 여기는 한 줄 받는 곳인데??
+        # 그럼 for 한 번 더 들어갈까??
+        # for k in range........
+        # 이거는 바로 하긴 좀 그렇고.. 일단 line을 받긴 해야함..
+        line = list(map(int, input().split()))
+        # 이 리스트를 해방시켜주기만 하면 바로 (i, j)접근 가능하지 않나?
+        
