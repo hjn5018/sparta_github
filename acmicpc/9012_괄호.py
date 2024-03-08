@@ -43,3 +43,10 @@ def is_vps(a):
         return 0 # 이 떄 리턴은 ??
     else:
         is_vps(a) = b + is_vps(a-1) # 처리하는 일 : basic_vps를 제거한다. a-1은 basic_vps를 없앤 str이 들어가야한다.
+# ==============================================
+stack = []
+
+brackets = {'[':']', '{':'}', '(':')'}
+
+stack.push(test_case[0])
+stack.push(test_case[1])
