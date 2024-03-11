@@ -167,6 +167,31 @@
 # print(num_list)
 # ['1', '2', '3', '4']
 # ============================================
+# N, M = map(int, input().split())
+
+# bowl_list = []
+# for _ in range(N):
+#     bowl_list.append(0)
+
+# for _ in range(M):
+#     i, j, k = map(int, input().split())
+#     k_ball_list = []
+    
+#     for _ in range(j-i+1):
+#         k_ball_list.append(k)
+    
+#     bowl_list[i-1:j] = k_ball_list
+#     # 번호 매기기 수정
+
+#     # print(bowl_list)
+
+# for l in range(len(bowl_list)):
+#     bowl_list[l] = str(bowl_list[l])
+# # join 사용 준비
+    
+# print(" ".join(bowl_list))
+# # 1 2 1 1 0
+# =================================================
 N, M = map(int, input().split())
 
 bowl_list = []
@@ -185,9 +210,14 @@ for _ in range(M):
 
     # print(bowl_list)
 
-for l in range(len(bowl_list)):
-    bowl_list[l] = str(bowl_list[l])
+# for l in range(len(bowl_list)):
+#     bowl_list[l] = str(bowl_list[l])
 # join 사용 준비
     
+
+bowl_list = [str(x) for x in bowl_list]
+# list comprehension 사용해보기
+# 성공
+
 print(" ".join(bowl_list))
 # 1 2 1 1 0
