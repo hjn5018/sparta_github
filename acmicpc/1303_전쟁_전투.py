@@ -39,3 +39,5 @@ for row in range(M):
         scores[0 if color == "W" else 1] += combo ** 2
 
 print(scores[0], scores[1])
+# ==============================================
+# 내가 풀어보자!
