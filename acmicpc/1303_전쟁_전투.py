@@ -5,6 +5,9 @@ board = []
 for _ in range(M):
     board.append([s for s in input()])
     # ["W", "B", "W", "W", "W"]
+# print(board)
+# [['W', 'B', 'W', 'W', 'W'], ['W', 'W', 'W', 'W', 'W'], ['B', 'B', 'B', 'B', 'B'], ['B', 'B', 'B', 'W', 'W'], ['W', 'W', 'W', 'W', 'W']]
+
 
 상하좌우 = [(-1, 0), (1, 0), (0, -1), (0, 1)]
 
@@ -35,6 +38,9 @@ for row in range(M):
     for col in range(N):
         color = board[row][col]
         # W or B
+        # print(color)
+        # W
+        
         combo = dfs_board(row,col)
         scores[0 if color == "W" else 1] += combo ** 2
 
