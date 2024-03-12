@@ -56,17 +56,34 @@
 # sys.stdout.write(f"{cards}")
 # # 시간 초과
 # ==========================================
-import sys
+# import sys
 
-N = int(sys.stdin.readline())
+# N = int(sys.stdin.readline())
 
-cards = []
-for i in range(1, N+1):
-    cards.append(i)
+# cards = []
+# for i in range(1, N+1):
+#     cards.append(i)
     
-for _ in range(N-1):
-    cards.pop(0)
-    cards.append(cards.pop(0))
+# for _ in range(N-1):
+#     cards.pop(0)
+#     cards.append(cards.pop(0))
 
-sys.stdout.write(f"{cards}")
+# sys.stdout.write(f"{cards}")
 # 시간 초과 // pypy3도 시간초과
+# ===========================================
+# N = int(input())
+
+# cards = []
+# for i in range(1, N+1):
+#     cards.append(i)
+    
+# # for _ in range(N-1):
+# #     cards.pop(0)
+    
+# # cards[0] = cards[5]
+# # [6, 2, 3, 4, 5, 6]
+
+# # cards[6] = cards[0]
+# # IndexError: list assignment index out of range
+
+# print(cards)
