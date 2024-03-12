@@ -1,3 +1,16 @@
+"""
+9
+0
+12345678
+1
+2
+0
+0
+0
+0
+32
+"""
+
 # list_ = []
 
 # N = int(input())
@@ -77,7 +90,54 @@
 #         except ValueError: # 배열이 비어있는데 가장 작은 값을 출력할 경우 0 출력
 #             print("0")
 # =========================================================
+# list_ = []
+
+# N = int(input())
+
+# # for _ in range(N):
+# # N번 하는 게 아니야!
+# while 1:
+#     x = int(input())
+
+#     if x > 0:
+#         list_.append(x)
+#     else:
+#         try:
+#             print(list_[-1:-1:-1])
+#             # IndexError: list index out of range
+#             list_.remove(min(list_))
+
+#         except ValueError: # 배열이 비어있는데 가장 작은 값을 출력할 경우 0 출력
+#             print("0")
+# =====================================================
+# import heapq
+
+# list_ = []
+# # list_.heapify()
+
+# N = int(input())
+
+# # for _ in range(N):
+# # N번 하는 게 아니야!
+# while 1:
+#     x = int(input())
+
+#     if x > 0:
+#         list_.heappush(x)
+#         # AttributeError: 'list' object has no attribute 'heappush'
+#     else:
+#         try:
+#             print(list_[-1:-1:-1])
+#             # IndexError: list index out of range
+#             list_.remove(min(list_))
+
+#         except ValueError: # 배열이 비어있는데 가장 작은 값을 출력할 경우 0 출력
+#             print("0")
+# =========================================================
+import heapq
+
 list_ = []
+# list_.heapify()
 
 N = int(input())
 
@@ -87,7 +147,8 @@ while 1:
     x = int(input())
 
     if x > 0:
-        list_.append(x)
+        list_.heappush(x)
+        # AttributeError: 'list' object has no attribute 'heappush'
     else:
         try:
             print(list_[-1:-1:-1])
@@ -96,3 +157,5 @@ while 1:
 
         except ValueError: # 배열이 비어있는데 가장 작은 값을 출력할 경우 0 출력
             print("0")
+
+# heapq 사용이 안 돼 ㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠ
