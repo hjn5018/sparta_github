@@ -87,3 +87,38 @@
 # # IndexError: list assignment index out of range
 
 # print(cards)
+# ==============================================
+# N = int(input())
+
+# cards = []
+# for i in range(1, N+1):
+#     cards.append(i)
+
+# for _ in range(N-1):
+#     del cards[0]
+# # del cards[0]
+# # print(cards)
+# # [2, 3, 4, 5, 6]
+#     cards.append(cards.pop(0))
+
+# print(cards)
+# # 시간 초과
+# =========================================
+from collections import deque
+
+N = int(input())
+
+cards = deque([x for x in range(1, N + 1)])
+
+for _ in range(N-1):
+    cards.popleft()
+    # print(cards.popleft())
+    # 1
+    cards.append(cards.popleft())
+
+# print(cards)
+# deque([4])
+print(cards[0])
+# 4
+
+# 야호!
