@@ -41,10 +41,14 @@ while True:
 if router == deque():
     print('empty')
 else:
+    # for i in range(len(router)):
+    #     router[i] = str(router[i])
+    # result = " ".join(router)
     result = " ".join([str(x) for x in router])
 # TypeError: sequence item 0: expected str instance, int found
     print(result)
 # 5 6
+    # print(" ".join([str(x) for x in router]))
 
 # 100점이지만 뭔가 께름칙한게.. deque에 아무것도 없는데 popleft하면 무슨 일이 일어나나..
 # ==================================
