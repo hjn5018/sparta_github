@@ -12,11 +12,6 @@ intervals = [[1, 3], [0, 4]]
 # result = [2, 3, 4, 1, 2, 3, 4, 5]
 
 
-list_ = []
 for i in intervals:
-    i[1] += 1
-    for j in range(i):
-        list_.append(j)
-
-print(list_)
+    print(i)
 
