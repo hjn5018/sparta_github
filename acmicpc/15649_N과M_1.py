@@ -81,7 +81,7 @@
 #     if len(picked_list) == M: 
 #         print(picked_list)
 #         return 
-   
+
 #     for i in range(1, N+1):
 #         if i in picked_list:
 #             continue    
@@ -99,71 +99,64 @@
 
 # 45678
 # ================================
-N, M = map(int, input().split())
+# N, M = map(int, input().split())
 
-list_ = []
-def dfs():
-    if len(list_) == M:
-        # print(f"{" ".join(map(str, list_))}")
-        # SyntaxError: f-string: expecting '}'
-        result = " ".join(map(str, list_))
-        print(result)
-        return
+# list_ = []
+# def dfs():
+#     if len(list_) == M:
+#         print(f'{" ".join(map(str, list_))}')
+#         # SyntaxError: f-string: expecting '}'
+#         # result = " ".join(map(str, list_))
+#         # print(result)
+#         return
     
-    for i in range(1, N+1):
-        if i in list_:
-            continue
-        list_.append(i)
-        dfs()
-        list_.pop()
+#     for i in range(1, N+1):
+#         if i in list_:
+#             continue
+#         list_.append(i)
+#         dfs()
+#         list_.pop()
 
-dfs()
+# dfs()
 # ===========================================
-N, M = map(int, input().split())
+# N, M = map(int, input().split())
 
-list_ = []
-def dfs():
-    if len(list_) == M and sorted(list_) == list_:
-        result = " ".join(map(str, list_))
-        print(result)
-        return
+# list_ = []
+# def dfs():
+#     if len(list_) == M and sorted(list_) == list_:
+#         result = " ".join(map(str, list_))
+#         print(result)
+#         return
     
-    for i in range(1, N+1):
-        if i in list_:
-            continue
-        list_.append(i)
-        dfs()
-        list_.pop()
+#     for i in range(1, N+1):
+#         if i in list_ or i <= max(list_) if list_ else 0:
+#             continue
+#         list_.append(i)
+#         dfs()
+#         list_.pop()
 
-        # if i in list_ or i <= max(list_):
-            # ValueError: max() arg is an empty sequence
-            # continue
-        # list_.append(i)
-        # dfs()
-        # list_.pop()
+#         # try except...
 
-        # try except...
+#         # if i > max(list_):
+#         #     ValueError: max() arg is an empty sequence
+#         #     list_.append(i)
+#         #     dfs()
+#         #     list_.pop()
 
-        # if i > max(list_):
-        #     ValueError: max() arg is an empty sequence
-        #     list_.append(i)
-        #     dfs()
-        #     list_.pop()
+#         # if i > list_[len(list_)]:
+#             # IndexError: list index out of range
+#             # list_.append(i)
+#             # dfs()
+#             # list_.pop()
 
-        # if i > list_[len(list_)]:
-            # IndexError: list index out of range
-            # list_.append(i)
-            # dfs()
-            # list_.pop()
-
-dfs()
+# dfs()
 # ===================================================
 N, M = map(int, input().split())
 
 
-def dfs(picked_list):
+def dfs(picked_list: list[int]) -> None:
     if len(picked_list) == M: 
-        print(picked_list)
+        print(' '.join(picked_list))
         return 
 
     
@@ -173,10 +166,10 @@ def dfs(picked_list):
         dfs(picked_list=picked_list+[i])
         # dfs(picked_list+=[i])
         # SyntaxError: invalid syntax
-
-
-dfs([])
-
+# print(1 + 0)
+# print(1)
+# picked_list=picked_list+[i]
+dfs('')
 # ===================================
 N, M = map(int, input().split())
 
@@ -193,7 +186,101 @@ def dfs():
             continue
         list_.append(i)
         dfs()
-        list_.pop()
+        # list_.pop()
+        []
 
 # str이 아닌 리스트를 쓰는 건 pop해야해서?
 dfs()
+# =====================================
+N, M = map(int, input().split())
+
+num_list = list(map(int, input().split()))
+num_list.sort()
+list_ = []
+def dfs():
+    if len(list_) == M:
+        print(list_)
+        return
+    
+    for i in num_list:
+        # if i in list_:
+        #     continue
+        list_.append(i)
+        dfs()
+        list_.pop()
+
+dfs()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+''.join(map(filter)(str, iter_))
+
+# ===================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+n
+L = [1,2,3,4,5]
+
+L2 = L[:1] + L[1+1:] - >O(n)
+
+
+
+N, M = map(int, input().split())
+
+
+def dfs():
+    if
+
+
+
+    # 구조
+    for
+        dfs()
