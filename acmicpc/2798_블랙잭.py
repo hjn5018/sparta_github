@@ -12,7 +12,7 @@
 #     print(L)
 #     for j in range(len(L)):
 #         del L[j]
-        # IndexError: list assignment index out of range
+#         IndexError: list assignment index out of range
 #         for k in range(len(L)):
 #             if L[i] + L[j] + L[k] < M:
 #                 list_.append(L[i] + L[j] + L[k])
