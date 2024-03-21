@@ -81,27 +81,7 @@
 #     if len(picked_list) == M: 
 #         print(picked_list)
 #         return 
-
-
-
-    # N, M = map(int, input().split())
-
-
-    # def dfs(picked_list):
-    #     if len(picked_list) == M: 
-    #         print(picked_list)
-    #         return 
-
-        
-    #     for i in range(1, N+1):
-    #         if i in picked_list:
-    #             continue
-    #         next_picked_list = picked_list+[i]
-    #         dfs(next_picked_list)
-
-    # dfs([])
-
-    
+   
 #     for i in range(1, N+1):
 #         if i in picked_list:
 #             continue    
@@ -118,3 +98,102 @@
 # 12345
 
 # 45678
+# ================================
+N, M = map(int, input().split())
+
+list_ = []
+def dfs():
+    if len(list_) == M:
+        # print(f"{" ".join(map(str, list_))}")
+        # SyntaxError: f-string: expecting '}'
+        result = " ".join(map(str, list_))
+        print(result)
+        return
+    
+    for i in range(1, N+1):
+        if i in list_:
+            continue
+        list_.append(i)
+        dfs()
+        list_.pop()
+
+dfs()
+# ===========================================
+N, M = map(int, input().split())
+
+list_ = []
+def dfs():
+    if len(list_) == M and sorted(list_) == list_:
+        result = " ".join(map(str, list_))
+        print(result)
+        return
+    
+    for i in range(1, N+1):
+        if i in list_:
+            continue
+        list_.append(i)
+        dfs()
+        list_.pop()
+
+        # if i in list_ or i <= max(list_):
+            # ValueError: max() arg is an empty sequence
+            # continue
+        # list_.append(i)
+        # dfs()
+        # list_.pop()
+
+        # try except...
+
+        # if i > max(list_):
+        #     ValueError: max() arg is an empty sequence
+        #     list_.append(i)
+        #     dfs()
+        #     list_.pop()
+
+        # if i > list_[len(list_)]:
+            # IndexError: list index out of range
+            # list_.append(i)
+            # dfs()
+            # list_.pop()
+
+dfs()
+# ===================================================
+N, M = map(int, input().split())
+
+
+def dfs(picked_list):
+    if len(picked_list) == M: 
+        print(picked_list)
+        return 
+
+    
+    for i in range(1, N+1):
+        if i in picked_list:
+            continue
+        dfs(picked_list=picked_list+[i])
+        # dfs(picked_list+=[i])
+        # SyntaxError: invalid syntax
+
+
+dfs([])
+
+# ===================================
+N, M = map(int, input().split())
+
+# 1,2 심어놓고 투다다 -> dfs
+list_ = []
+def dfs():
+    if len(list_) == M:
+        print(list_)
+        return
+    
+    # 첫 번째 수가 N까지 돌긴해야하니까 for문
+    for i in range(1, N+1):
+        if i in list_:
+            continue
+        list_.append(i)
+        dfs()
+        list_.pop()
+
+# str이 아닌 리스트를 쓰는 건 pop해야해서?
+dfs()
