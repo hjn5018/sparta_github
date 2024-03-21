@@ -177,28 +177,28 @@
 # L3=[5, 6, 8]
 # L3=[5, 6, 7]
 # =============================================
-N, M = map(int, input().split())
+# N, M = map(int, input().split())
 
-L = list(map(int, input().split()))
+# L = list(map(int, input().split()))
 
-list_ = []
-for i in range(len(L)):
-    L2 = L[:i] + L[i+1:]
-#     print(f"{L2=}")
-    for j in range(len(L2)):
-        L3 = L2[:j] + L2[j+1:]
-        # list_.append(L3)
-        # list_.append(sum(L3))
-        # print(f"{L3}")
-        # if sum(L3) <= M:
-        #     pass
-        #     list_.append(sum(L3))
-        for k in range(len(L3)):
-        #     print(L[i], L2[j], L3[k])
-            if (L[i] + L2[j] + L3[k]) <= M:
-                list_.append(L[i] + L2[j] + L3[k])
-# print(list_)
-print(max(list_))
+# list_ = []
+# for i in range(len(L)):
+#     L2 = L[:i] + L[i+1:]
+# #     print(f"{L2=}")
+#     for j in range(len(L2)):
+#         L3 = L2[:j] + L2[j+1:]
+#         # list_.append(L3)
+#         # list_.append(sum(L3))
+#         # print(f"{L3}")
+#         # if sum(L3) <= M:
+#         #     pass
+#         #     list_.append(sum(L3))
+#         for k in range(len(L3)):
+#         #     print(L[i], L2[j], L3[k])
+#             if (L[i] + L2[j] + L3[k]) <= M:
+#                 list_.append(L[i] + L2[j] + L3[k])
+# # print(list_)
+# print(max(list_))
 ##################################################### 497
 
 # print(list_)
@@ -312,3 +312,19 @@ print(max(list_))
 #     L3 = L2[:j] + L2[j+1:]
 #     k = L3[0]
 #     print(i, j, k)
+# ====================================
+N, M = map(int, input().split())
+
+L = list(map(int, input().split()))
+
+list_ = []
+for i in range(len(L)):
+    L2 = L[:i] + L[i+1:]
+
+    for j in range(len(L2)):
+        L3 = L2[:j] + L2[j+1:]
+
+        for k in range(len(L3)):
+            if (L[i] + L2[j] + L3[k]) <= M:
+                list_.append(L[i] + L2[j] + L3[k])
+print(max(list_))
