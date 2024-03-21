@@ -23,15 +23,50 @@
     
 
 
-# 소수 검증
-# a가 소수이려면
-# a 이하의 모든 수로 나눴을 때 나머지가 0이 아니다.
-a = 1000
-for i in range(1, a+1):
-    if a % i == 0: # a가 i의 배수인 경우 -> 소수 아님
-        break
+# # 소수 검증
+# # a가 소수이려면
+# # a 이하의 모든 수로 나눴을 때 나머지가 0이 아니다.
+# a = 1000
+# for i in range(1, a+1):
+#     if a % i == 0: # a가 i의 배수인 경우 -> 소수 아님
+#         break
     
-print('소수 아님')
+# print('소수 아님')
 
-        # 소수 아님.
-        
+#         # 소수 아님.
+
+
+# while 1:
+#     N = int(input())
+#     if N == 0:
+#         break
+
+#     num_list = [x for x in range(N, 2*N +1)]
+#     print(f"{num_list = }")
+#     count = 0
+#     for i in num_list:
+#         list_ = []
+#         for j in range(1, i+1):
+#             if i % j == 0:
+#                 list_.append(j)
+#         if len(list_) == 2:
+#             count += 1
+#     print(count)
+
+
+N = int(input())
+
+num_list = [x for x in range(N, 2*N +1)]
+
+count = 0
+for i in num_list:
+
+    list_ = []
+    for j in range(1, i+1):
+        if i % j == 0:
+            list_.append(j)
+
+    if len(list_) == 2:
+        count += 1
+
+print(count)
